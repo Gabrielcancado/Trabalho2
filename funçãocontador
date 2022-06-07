@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int contador(char z[]){
+    char letras[] = "abcdefghijklmnopqrstuvwxyz";
+    int numero=0,i=0,j=0;
+    for(i=0;i<strlen(z);i++){
+        for(j=0;j<strlen(letras);j++){
+            if(z[i]==letras[j]){
+                numero++;
+            }
+        }
+    }
+    return (numero);
+}
+int main()
+{
+    int numero=0;
+    char a[10];
+    printf("insira uma palavra\n");
+    scanf("%s", &a);
+    numero = contador(a);
+    printf("a palavra %s tem %i letras", a, numero);
+    return 0;
+}
